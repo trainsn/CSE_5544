@@ -1,6 +1,4 @@
 
-var brands = [], brand_ids = [];
-var names = [];
 var bar_svg;
 var highlight_ids = []; 
 
