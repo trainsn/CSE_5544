@@ -11,7 +11,7 @@ function draw_barChart(state_name){
 				break;
 			}
 		}
-		console.log(casesByMonth);
+		// console.log(casesByMonth);
 
 		var margin = {top: 10, right: 20, bottom: 135, left: 40},
   		  width = 680 - margin.left - margin.right,
