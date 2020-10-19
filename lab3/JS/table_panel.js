@@ -41,8 +41,7 @@ function drawTable(error, casesByState){
 		  .text(function (d) { 
 		  	return d.value; 
 		  });
-
-		return table;
 	}
+	
 }
 
