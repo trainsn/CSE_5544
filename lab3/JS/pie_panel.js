@@ -1,6 +1,4 @@
-draw_pieChart('California');
-
-function draw_pieChart(state_name){
+export function draw_pieChart(state_name){
 	d3.csv("./data/casesByMonth.csv", drawPie);
 	var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct'];
 
@@ -12,7 +10,7 @@ function draw_pieChart(state_name){
 				break;
 			}
 		}
-		console.log(casesByMonth);
+		// console.log(casesByMonth);
 
 		var total_cases = 0;
 		for (const row of casesByMonth){
@@ -31,7 +29,7 @@ function draw_pieChart(state_name){
 			if (i == 1)
 				currentAngle -= 2 * Math.PI;
 		}
-		console.log(arcData);
+		// console.log(arcData);
 
 		var margin = {top: 170, right: 20, bottom: 135, left: 350},
   		  width = 680 - margin.left - margin.right,
@@ -48,12 +46,6 @@ function draw_pieChart(state_name){
 		var arc = d3.arc()
 				.innerRadius(0)
 				.outerRadius(radius);
-		var outerArc = d3.arc()
-               	.innerRadius(1.2 * radius)
-                .outerRadius(1.2 * radius);
-        var oArc = d3.arc()
-                .innerRadius(1.0 * radius)
-                .outerRadius(1.0 * radius);
 
 		pie_svg.selectAll('path')
 				.data(arcData)

@@ -1,6 +1,4 @@
-draw_barChart('California');
-
-function draw_barChart(state_name){
+export function draw_barChart(state_name){
 	d3.csv("./data/casesByMonth.csv", drawBar);
 	
 	function drawBar(error, dataset){
@@ -13,7 +11,7 @@ function draw_barChart(state_name){
 		}
 		// console.log(casesByMonth);
 
-		var margin = {top: 10, right: 20, bottom: 135, left: 40},
+		var margin = {top: 40, right: 20, bottom: 135, left: 70},
   		  width = 680 - margin.left - margin.right,
   		  height = 460 - margin.top - margin.bottom;
 
@@ -27,6 +25,9 @@ function draw_barChart(state_name){
   		    .attr("height", height + margin.top + margin.bottom)
   		  	.append("g")
   		    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  		bar_svg.append("text")
+		        .text(state_name);
 
   		x.domain(dataset.map(function(d) { return d['month']; }));
   		var casesMax = 0;
