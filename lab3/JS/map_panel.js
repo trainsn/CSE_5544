@@ -71,7 +71,7 @@ function drawMapCircle(error, casesByState){
 		    .attr('r', function(d) {
 		    	var state = d.properties.STUSPS10;
 		    	state = abbrState(state, 'name');
-		    	console.log(state);
+		    	// console.log(state);
 		        return get_radius(state);
 		    })
 		    .attr('fill', 'steelblue')
