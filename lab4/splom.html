@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<link type="text/css" rel="stylesheet" href="style.css"/>
+<style type="text/css">
+
+svg { 
+  font-size: 14px;
+}
+
+.frame {
+  shape-rendering: crispEdges;
+}
+
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.axis line {
+  stroke: #ddd;
+  stroke-width: .5px;
+}
+
+.axis path {
+  display: none;
+}
+
+.cell text {
+  fill: black;
+}
+
+.frame {
+  fill: none;
+  stroke: #aaa;
+}
+
+circle {
+  fill-opacity: .5;
+}
+
+circle.hidden {
+  fill: #ccc !important;
+}
+
+.legend circle {
+  fill-opacity: 1;
+}
+
+.legend text {
+  font-size: 18px;
+  font-style: oblique;
+}
+
+.setosa {
+  fill: #800;
+}
+
+.versicolor {
+  fill: #080;
+}
+
+.virginica {
+  fill: #008;
+}
+
+.extent {
+  fill: #000;
+  fill-opacity: .125;
+  stroke: #fff;
+}
+
+</style>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="splom.js"></script>
+</html>

@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <style type="text/css">
+
+svg {
+  font-size: 14px;
+}
+
+.foreground path {
+  fill: none;
+  stroke-opacity: .5;
+  stroke-width: 1.5px;
+}
+
+.foreground path.fade {
+  stroke: #000;
+  stroke-opacity: .05;
+}
+
+.legend {
+  font-size: 18px;
+  font-style: oblique;
+}
+
+.legend line {
+  stroke-width: 2px;
+}
+
+.brush .extent {
+  fill-opacity: .3;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+.axis line, .axis path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  text-shadow: 0 1px 0 #fff;
+  cursor: move;
+}
+
+</style>
+</head>
+<body>
+<script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+<script type="text/javascript" src="pcp.js"></script>
+  </body>
+</html>

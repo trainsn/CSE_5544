@@ -7,8 +7,8 @@ function drawMapCircle(error, casesByState){
 	var paths;
 
 	function drawUSA(error, states) {
-		var width_map = 700;
-		var height_map = 700;
+		var width_map = 900;
+		var height_map = 900;
 
 		var projection = d3.geoEquirectangular()
 			.fitExtent([[0,0], [width_map, height_map]], states);
