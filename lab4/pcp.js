@@ -81,5 +81,23 @@ function path(d) {
 
 // Handles a brush event, toggling the display of foreground lines.
 function brush() {
+  var highlight = [];
+  svg.selectAll(".brush")
+      .filter(function(d) {
+          return d3.brushSelection(this);
+      })
+      .each(function(d){
+        highlight.push({
+          dim: d,
+          e: d3.brushSelection(this)
+        })
+      })
 
+  foreground.classed("fade", function(d, i){
+    inValid = !highlight.every(function(h){
+      var dim = h.dim;
+      return y[dim](d[dim]) >= h.e[0] && y[dim](d[dim]) <= h.e[1];
+    });
+    return inValid;
+  });
 }
