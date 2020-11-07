@@ -36,7 +36,11 @@ d3.json("miserables.json", function(miserables) {
     nodes[link.target].count += link.value;
   });
 
-  var orderByName = d3.range(n).sort(function(a, b) { return d3.ascending(nodes[a].name, nodes[b].name); })
+  // var orderByName = d3.range(n).sort(function(a, b) { return d3.ascending(nodes[a].name, nodes[b].name); })
+  var orderByName = d3.range(n).sort(function(a, b){
+    diff = nodes[b].group - nodes[a].group
+    return diff;
+  })
 
   x.domain(orderByName);
 
